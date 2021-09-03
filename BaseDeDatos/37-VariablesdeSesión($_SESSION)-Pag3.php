@@ -1,0 +1,28 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    /*
+        echo "Nombre de usuario recuperado de la variable de sesión:" . $_SESSION['usuario'];
+        echo "<br><br>";
+        echo "La clave recuperada de la variable de sesión:" . $_SESSION['clave'];
+    */
+    if (isset($_SESSION['usuario'])) {
+        echo "Bienvenido " . $_SESSION['usuario'];
+    } else {
+        echo "No tiene permitido visitar esta página.";
+    }
+
+    ?>
+</body>
+</html>
